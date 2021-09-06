@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap");
+
+html {
+	font-size: 16px;
+}
+body {
+	font-family: "Red Hat Display", sans-serif;
+	background-color: #282c34;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+	min-height: 2rem;
+	max-width: 1000px;
+	background-color: aquamarine;
+	display: grid;
+	grid-template-columns: 30% 70%;
+	grid-template-rows: 1fr;
+	color: black;
+	align-items: center;
+	text-align: left;
+	margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+	padding: 1rem 2rem;
+	font-weight: 900;
+	font-size: 1.3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.desktop-navigation {
+	padding: 0.5rem;
+	list-style-type: none;
+	display: flex;
+	justify-content: left;
+}
+.mobile-navigation {
+	padding: 0.5rem;
+	list-style-type: none;
+	display: flex;
+	justify-content: left;
 }
 
-.App-link {
-  color: #61dafb;
+.desktop-navigation li {
+	padding-right: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 500px) {
+	.desktop-navigation {
+		display: none;
+	}
+	.mobile-navigation {
+		display: flex;
+	}
+	.header {
+		grid-template-columns: 1.5fr 0.5fr;
+	}
+}
+@media (min-width: 501px) {
+	.desktop-navigation {
+		display: flex;
+	}
+	.mobile-navigation {
+		display: none;
+	}
 }
