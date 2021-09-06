@@ -3,6 +3,9 @@
 html {
 	font-size: 14px;
 }
+.App {
+	justify-content: space-between;
+}
 body {
 	font-family: "Red Hat Display", sans-serif;
 	background-color: #282c34;
@@ -29,6 +32,7 @@ body {
 	font-family: "Red Hat Display", sans-serif;
 	font-size: 1rem;
 }
+
 .d-flex {
 	padding-left: 2rem;
 }

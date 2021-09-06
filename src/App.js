@@ -9,18 +9,20 @@ function App() {
 			<header className="header">
 				<Navbar bg="light" expand="lg" id="desktop-navigation">
 					<Navbar.Brand href="#" className="title">
-						The Recepie Cave
+						The Recipe Cave
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="navbarScroll" />
 					<Navbar.Collapse id="navbarScroll">
 						<Nav className="mr-auto my-2 my-lg-0" style={{ maxHeight: "300px" }} navbarScroll>
-							<Nav.Link href="#action1">Home</Nav.Link>
+							<Nav.Link href="./">Home</Nav.Link>
+							<Nav.Link href="./contact">Contact</Nav.Link>
 							<NavDropdown title="Recepies" id="navbarScrollingDropdown">
 								<NavDropdown.Item href="#action3">Meat Balls</NavDropdown.Item>
 								<NavDropdown.Item href="#action4">Pasta Carbonara</NavDropdown.Item>
 								<NavDropdown.Divider />
 								<NavDropdown.Item href="#action5">+ Add recepie</NavDropdown.Item>
 							</NavDropdown>
+							<Nav.Link href="./member">Become a Contributor</Nav.Link>
 						</Nav>
 						<Form className="d-flex">
 							<FormControl type="search" placeholder="Search for Recepie" className="mr-2" aria-label="Search" />
