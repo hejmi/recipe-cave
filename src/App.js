@@ -1,25 +1,33 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
 
 function App() {
 	return (
 		<div className="App">
 			<header className="header">
-				<div className="title">The Recipe Cave</div>
-				<div>
-					<nav>
-						<ul className="desktop-navigation">
-							<li>Home</li>
-							<li>Recipes</li>
-							<li>Contact</li>
-						</ul>
-						<ul className="mobile-navigation">
-							<li>Home</li>
-							<li>Recipes</li>
-							<li>Contact</li>
-						</ul>
-					</nav>
-				</div>
+				<Navbar bg="light" expand="lg" id="desktop-navigation">
+					<Navbar.Brand href="#" className="title">
+						The Recepie Cave
+					</Navbar.Brand>
+					<Navbar.Toggle aria-controls="navbarScroll" />
+					<Navbar.Collapse id="navbarScroll">
+						<Nav className="mr-auto my-2 my-lg-0" style={{ maxHeight: "300px" }} navbarScroll>
+							<Nav.Link href="#action1">Home</Nav.Link>
+							<NavDropdown title="Recepies" id="navbarScrollingDropdown">
+								<NavDropdown.Item href="#action3">Meat Balls</NavDropdown.Item>
+								<NavDropdown.Item href="#action4">Pasta Carbonara</NavDropdown.Item>
+								<NavDropdown.Divider />
+								<NavDropdown.Item href="#action5">+ Add recepie</NavDropdown.Item>
+							</NavDropdown>
+						</Nav>
+						<Form className="d-flex">
+							<FormControl type="search" placeholder="Search for Recepie" className="mr-2" aria-label="Search" />
+							&nbsp;<Button variant="outline-dark">Search</Button>
+						</Form>
+					</Navbar.Collapse>
+				</Navbar>
 			</header>
 		</div>
 	);
