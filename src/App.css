@@ -17,12 +17,21 @@ body {
 	align-items: center;
 	text-align: left;
 	margin: auto;
+	opacity: 0;
+	animation: fadeIn 1s 2s forwards;
 }
 
 .title {
-	padding: 1rem 0;
+	padding: 1rem 2rem 1rem 0;
+	margin: 0 2rem 0 -1rem;
 	font-weight: 900;
 	font-size: 1.3rem;
+	opacity: 0;
+	animation: bounceInNormal 0.5s 3s forwards;
+}
+
+.title-cave {
+	margin-top: -2px;
 }
 
 #desktop-navigation {
@@ -38,17 +47,20 @@ body {
 }
 
 .page-loader {
-	padding: 10rem 0;
+	position: absolute;
+	margin: auto;
 	text-align: center;
+	top: calc(50% - 6em);
+	left: calc(50% - 6em);
+	animation: fadeOut 1s 2s forwards;
 }
 
 .logo-text {
 	z-index: 1;
 	font-weight: 900;
-	animation: bounceIn 1s;
+	animation: bounceIn 1s 0.3s;
 	transition: ease-out;
-	animation-delay: 0.3s;
-	margin-top: -1rem;
+	margin-top: 3rem;
 	opacity: 0;
 	animation-fill-mode: forwards;
 }
@@ -57,8 +69,8 @@ body {
 	z-index: 0;
 	width: 8em;
 	height: 8em;
-	animation: bounceIn 1s;
-	transform: rotate(0deg) scale(1) translateZ(0);
+	animation: bounceIn 1s, gelatine 0.5s 1s;
+	transform: rotate(0deg) scale(2) translateZ(0);
 	transition: ease-out;
 }
 
@@ -68,7 +80,24 @@ body {
 	}
 }
 
-@keyframes bounceIn {
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes bounceInNormal {
 	0% {
 		opacity: 0;
 		transform: scale(0.1);
@@ -91,5 +120,47 @@ body {
 	100% {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.1);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(2.5);
+	}
+
+	70% {
+		opacity: 1;
+		transform: scale(1.9);
+	}
+
+	90% {
+		opacity: 1;
+		transform: scale(2.1);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(2);
+	}
+}
+
+@keyframes gelatine {
+	from,
+	to {
+		transform: scale(2, 2);
+	}
+	25% {
+		transform: scale(1.9, 2.1);
+	}
+	50% {
+		transform: scale(2.1, 1.9);
+	}
+	75% {
+		transform: scale(1.95, 2.05);
 	}
 }

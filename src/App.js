@@ -11,7 +11,7 @@ function App() {
 			<header className="header">
 				<Navbar bg="light" expand="lg" id="desktop-navigation">
 					<Navbar.Brand href="#" className="title">
-						The Recipe Cave
+						<img src="/images/cave.png" width="30" alt="cave" className="title-cave" /> The Recipe Cave
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="navbarScroll" />
 					<Navbar.Collapse id="navbarScroll">
