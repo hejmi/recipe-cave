@@ -3,6 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
 import LoadRecipes from "./components/LoadRecipes";
+import PageLoader from "./components/PageLoader";
 
 function App() {
 	return (
@@ -31,6 +32,7 @@ function App() {
 					</Navbar.Collapse>
 				</Navbar>
 			</header>
+			<PageLoader />
 		</div>
 	);
 }

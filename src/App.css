@@ -37,8 +37,59 @@ body {
 	padding-left: 2rem;
 }
 
+.page-loader {
+	padding: 10rem 0;
+	text-align: center;
+}
+
+.logo-text {
+	z-index: 1;
+	font-weight: 900;
+	animation: bounceIn 1s;
+	transition: ease-out;
+	animation-delay: 0.3s;
+	margin-top: -1rem;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+.cave-logo {
+	z-index: 0;
+	width: 8em;
+	height: 8em;
+	animation: bounceIn 1s;
+	transform: rotate(0deg) scale(1) translateZ(0);
+	transition: ease-out;
+}
+
 @media screen and (max-width: 991px) {
 	.d-flex {
 		padding-left: 0;
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.1);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.5);
+	}
+
+	70% {
+		opacity: 1;
+		transform: scale(0.9);
+	}
+
+	90% {
+		opacity: 1;
+		transform: scale(1.1);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
