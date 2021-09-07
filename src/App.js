@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
 import LoadRecipes from "./components/LoadRecipes";
 import PageLoader from "./components/PageLoader";
+import MainPage from "./components/MainPage";
 
 function App() {
 	return (
@@ -15,9 +16,9 @@ function App() {
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="navbarScroll" />
 					<Navbar.Collapse id="navbarScroll">
-						<Nav className="mr-auto my-2 my-lg-0" style={{ maxHeight: "300px" }} navbarScroll>
-							<Nav.Link href="./">Home</Nav.Link>
-							<Nav.Link href="./contact">Contact</Nav.Link>
+						<Nav className="mr-auto my-2 my-lg-0" style={{ maxHeight: "300px", zIndex: "1" }} navbarScroll>
+							<Nav.Link href="/">Home</Nav.Link>
+							<Nav.Link href="/contact">Contact</Nav.Link>
 							<NavDropdown title="Recepies" id="navbarScrollingDropdown">
 								<LoadRecipes />
 								<NavDropdown.Divider />
@@ -32,6 +33,7 @@ function App() {
 					</Navbar.Collapse>
 				</Navbar>
 			</header>
+			<MainPage />
 			<PageLoader />
 		</div>
 	);

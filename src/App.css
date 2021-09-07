@@ -4,6 +4,7 @@ html {
 	font-size: 14px;
 }
 .App {
+	font-family: "Red Hat Display", sans-serif;
 	justify-content: space-between;
 }
 body {
@@ -12,6 +13,8 @@ body {
 }
 
 .header {
+	position: relative;
+	z-index: 100;
 	min-height: 2rem;
 	max-width: 1000px;
 	align-items: center;
@@ -37,6 +40,7 @@ body {
 #desktop-navigation {
 	padding: 0.5rem 3rem;
 }
+
 .navbar {
 	font-family: "Red Hat Display", sans-serif;
 	font-size: 1rem;
