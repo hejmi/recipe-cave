@@ -5,7 +5,12 @@ import ShowRecipe from "./ShowRecipe";
 function MainPage() {
 	return (
 		<div className="main">
-			<ShowRecipe />
+			<div className="container">
+				<ShowRecipe recipeid={1} />
+			</div>
+			<div className="container">
+				<ShowRecipe recipeid={2} />
+			</div>
 		</div>
 	);
 }

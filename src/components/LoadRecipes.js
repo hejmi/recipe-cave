@@ -15,7 +15,7 @@ function LoadRecipes() {
 		<div>
 			{recipeList.map((recipe, key) => {
 				return (
-					<div>
+					<div key={key}>
 						<NavDropdown.Item href={`/loadrecipe/${recipe.id}`}>{recipe.title}</NavDropdown.Item>
 					</div>
 				);
