@@ -38,7 +38,7 @@ body {
 }
 
 #desktop-navigation {
-	padding: 0.5rem 3rem;
+	padding: 1rem 3rem;
 }
 
 .navbar {
@@ -76,6 +76,34 @@ body {
 	animation: bounceIn 1s, gelatine 0.5s 1s;
 	transform: rotate(0deg) scale(2) translateZ(0);
 	transition: ease-out;
+}
+.recipe-container {
+	max-width: 29rem;
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: 0px 0px 20px 0px rgba(150, 150, 150, 0.2);
+	display: flex;
+}
+.recipe-image {
+	padding: 5px;
+	border-radius: 1rem;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+.recipe-title {
+	font-weight: 500;
+}
+.recipe-content {
+	padding: 1rem;
+	height: 200px;
+}
+.recipe-content em {
+	font-size: 0.8rem;
+}
+.recipe-bottom {
+	position: relative;
+	bottom: 0px;
 }
 
 @media screen and (max-width: 991px) {
