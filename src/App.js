@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
+import LoadRecipes from "./components/LoadRecipes";
 
 function App() {
 	return (
@@ -16,8 +17,7 @@ function App() {
 						<Nav className="mr-auto my-2 my-lg-0" style={{ maxHeight: "300px" }} navbarScroll>
 							<Nav.Link href="#action1">Home</Nav.Link>
 							<NavDropdown title="Recepies" id="navbarScrollingDropdown">
-								<NavDropdown.Item href="#action3">Meat Balls</NavDropdown.Item>
-								<NavDropdown.Item href="#action4">Pasta Carbonara</NavDropdown.Item>
+								<LoadRecipes />
 								<NavDropdown.Divider />
 								<NavDropdown.Item href="#action5">+ Add recepie</NavDropdown.Item>
 							</NavDropdown>
