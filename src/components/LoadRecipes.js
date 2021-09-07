@@ -6,7 +6,7 @@ function LoadRecipes() {
 	const [recipeList, setRecipeList] = useState([]);
 
 	useEffect(() => {
-		Axios.get("http://localhost:3002/api/get").then((data) => {
+		Axios.get("http://192.168.1.13:3002/api/get").then((data) => {
 			setRecipeList(data.data);
 		});
 	}, []);
