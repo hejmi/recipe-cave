@@ -8,7 +8,7 @@ function ShowRecipe(props) {
 	const [recipeData, setRecipeData] = useState([]);
 
 	useEffect(() => {
-		Axios.get(`http://151.177.145.141:3002/api/getFromId/${props.recipeid}`).then((data) => {
+		Axios.get(`http://localhost:3002/api/getFromId/${props.recipeid}`).then((data) => {
 			setRecipeData(data.data);
 		});
 	}, []);
