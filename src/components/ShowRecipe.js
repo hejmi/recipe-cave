@@ -11,7 +11,7 @@ function ShowRecipe(props) {
 		Axios.get(`http://localhost:3002/api/getFromId/${props.recipeid}`).then((data) => {
 			setRecipeData(data.data);
 		});
-	}, []);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return recipeData.map((recipe, key) => {
 		return (
