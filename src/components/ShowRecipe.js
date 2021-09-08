@@ -1,4 +1,5 @@
 import React from "react";
+import { Clock } from "react-bootstrap-icons";
 
 /*let recipeId = this.props.recipeid;*/
 const openRecipe = (id) => console.log("Opened recipe: " + id);
@@ -12,7 +13,9 @@ function ShowRecipe() {
 			<div className="recipe-content">
 				<div className="recipe-title">Easy Pancakes</div>
 				<em className="recipe-desc">Making pancake batter from scratch is so simple that you'll wonder why you never did it before!</em>
-				<div className="recipe-bottom">Prep: 5min, Cooking: 20min</div>
+				<div className="recipe-bottom">
+					<Clock /> <small>Prep: 5min, Cooking: 20min</small>
+				</div>
 			</div>
 		</div>
 	);
