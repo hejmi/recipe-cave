@@ -11,10 +11,10 @@ function ShowRecipe() {
 				<img src="/images/recipe/1.jpg" alt="1" className="recipe-image" />
 			</div>
 			<div className="recipe-content">
-				<div className="recipe-title">Easy Pancakes</div>
+				<div className="recipe-title">Easy Peasy Pancakes</div>
 				<em className="recipe-desc">Making pancake batter from scratch is so simple that you'll wonder why you never did it before!</em>
 				<div className="recipe-bottom">
-					<Clock /> <small>Prep: 5min, Cooking: 20min</small>
+					<Clock /> <span>Prep: 5min, Cooking: 20min</span>
 				</div>
 			</div>
 		</div>
