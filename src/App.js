@@ -18,15 +18,15 @@ function App() {
 						<Nav className="mr-auto my-2 my-lg-0" style={{ maxHeight: "300px", zIndex: "1" }} navbarScroll>
 							<Nav.Link href="/">Home</Nav.Link>
 							<Nav.Link href="/contact">Contact</Nav.Link>
-							<NavDropdown title="Recepies" id="navbarScrollingDropdown">
+							<NavDropdown title="Recipes" id="navbarScrollingDropdown">
 								<LoadRecipes />
 								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action5">+ Add recepie</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">+ Add recipe</NavDropdown.Item>
 							</NavDropdown>
 							<Nav.Link href="./member">Become a Contributor</Nav.Link>
 						</Nav>
 						<Form className="d-flex">
-							<FormControl type="search" placeholder="Search for Recepie" className="mr-2" aria-label="Search" />
+							<FormControl type="search" placeholder="Search for Recipe" className="mr-2" aria-label="Search" />
 							&nbsp;<Button variant="outline-dark">Search</Button>
 						</Form>
 					</Navbar.Collapse>

@@ -8,7 +8,7 @@ function ShowRecipe(props) {
 	const [recipeData, setRecipeData] = useState([]);
 
 	useEffect(() => {
-		Axios.get(`http://192.168.1.13:3002/api/getFromId/${props.recipeid}`).then((data) => {
+		Axios.get(`http://151.177.145.141:3002/api/getFromId/${props.recipeid}`).then((data) => {
 			setRecipeData(data.data);
 		});
 	}, []);
@@ -25,7 +25,7 @@ function ShowRecipe(props) {
 					<div className="recipe-bottom">
 						<Clock />{" "}
 						<span>
-							Prep: {recipe.prep_time}min, Cooking: {recipe.cooking_time}min
+							Prep: {recipe.prep_time} min, Cooking: {recipe.cooking_time}min
 						</span>
 					</div>
 				</div>
