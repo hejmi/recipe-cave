@@ -79,14 +79,24 @@ body {
 	transition: ease-out;
 }
 .main {
-	z-index: 10;
 	max-width: 1000px;
-	padding-left: 3rem;
 	text-align: left;
-	margin: 4rem auto auto auto;
+	margin: 2rem auto 2rem auto;
+	padding: 1rem auto;
 	opacity: 0;
 	animation: fadeIn 1s 2.3s forwards;
-	display: flex;
+}
+.slide-container {
+	padding-left: 2rem;
+	height: 300px;
+	text-align: left;
+	margin: auto;
+	opacity: 0;
+	animation: fadeIn 1s 2.3s forwards;
+}
+.each-slide {
+	margin: 2rem;
+	height: 350px;
 }
 
 .recipe-container {
@@ -144,11 +154,6 @@ body {
 	.main {
 		display: inline;
 		margin: auto;
-	}
-	.container {
-		margin: auto;
-		display: grid;
-		padding-bottom: 1.5rem;
 	}
 	.recipe-container {
 		justify-self: center;
