@@ -86,7 +86,7 @@ body {
 	cursor: pointer;
 }
 .recipe-container:hover {
-	animation: swing 1s infinite linear;
+	animation: hoverZoom 0.1s forwards linear;
 }
 .recipe-image {
 	padding: 5px;
@@ -221,5 +221,16 @@ body {
 	}
 	100% {
 		transform: rotate(0deg);
+	}
+}
+
+@keyframes hoverZoom {
+	0% {
+		transform: scale(1);
+		box-shadow: 0px 0px 20px 0px rgba(150, 150, 150, 0.2);
+	}
+	100% {
+		transform: scale(1.02);
+		box-shadow: 0px 0px 20px 0px rgba(150, 150, 150, 0.4);
 	}
 }
