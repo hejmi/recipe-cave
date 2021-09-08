@@ -1,23 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
 import { Clock } from "react-bootstrap-icons";
 
-/*let recipeId = this.props.recipeid;*/
 const openRecipe = (id) => console.log("Opened recipe: " + id);
 
-function ShowRecipe() {
-	return (
-		<div className="recipe-container" onClick={() => openRecipe(1)}>
-			<div>
-				<img src="/images/recipe/1.jpg" alt="1" className="recipe-image" />
-			</div>
-			<div className="recipe-content">
-				<div className="recipe-title">Easy Peasy Pancakes</div>
-				<em className="recipe-desc">Making pancake batter from scratch is so simple that you'll wonder why you never did it before!</em>
-				<div className="recipe-bottom">
-					<Clock /> <span>Prep: 5min, Cooking: 20min</span>
+function ShowRecipe(props) {
+	const [recipeData, setRecipeData] = useState([]);
+
+	useEffect(() => {
+		Axios.get(`http://192.168.1.13:3002/api/getFromId/${props.recipeid}`).then((data) => {
+			setRecipeData(data.data);
+		});
+	}, []);
+
+	return recipeData.map((recipe, key) => {
+		return (
+			<div key={key} className="recipe-container" onClick={() => openRecipe(props.recipeid)}>
+				<div>
+					<img src={`/images/recipe/${props.recipeid}.jpg`} alt={props.recipeid} className="recipe-image" />
+				</div>
+				<div className="recipe-content">
+					<div className="recipe-title">{recipe.title}</div>
+					<em className="recipe-desc">{recipe.description}</em>
+					<div className="recipe-bottom">
+						<Clock />{" "}
+						<span>
+							Prep: {recipe.prep_time}min, Cooking: {recipe.cooking_time}min
+						</span>
+					</div>
 				</div>
 			</div>
-		</div>
-	);
+		);
+	});
 }
 export default ShowRecipe;

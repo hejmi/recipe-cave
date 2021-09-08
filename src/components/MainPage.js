@@ -5,10 +5,10 @@ function MainPage() {
 	return (
 		<div className="main">
 			<div className="container">
-				<ShowRecipe recipeid={1} />
+				<ShowRecipe recipeid="1" />
 			</div>
 			<div className="container">
-				<ShowRecipe recipeid={2} />
+				<ShowRecipe recipeid="2" />
 			</div>
 		</div>
 	);
