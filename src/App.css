@@ -39,6 +39,7 @@ body {
 
 #desktop-navigation {
 	padding: 1rem 3rem;
+	background-color: rgb(232, 232, 232) !important;
 }
 
 .navbar {
