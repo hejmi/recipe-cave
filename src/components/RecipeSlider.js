@@ -10,7 +10,7 @@ const Slideshow = () => {
 	size.width <= 800 ? (slidess = 1) : (slidess = 2);
 	return (
 		<div className="slide-container">
-			<Slide slidesToShow={slidess} arrows={false}>
+			<Slide slidesToShow={slidess} arrows={false} cssClass="slideshow">
 				<div className="each-slide">
 					<ShowRecipe recipeid="1" />
 				</div>
