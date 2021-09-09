@@ -208,7 +208,7 @@ body {
     text-decoration: none;
 }
 
-.contact {
+.newsletter {
     display: flex;
     align-items: center;
     text-align: center;
@@ -216,8 +216,21 @@ body {
     color: #888;
 }
 
-.contact-form {
-    padding: 3%;
+.contact-main {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.contact-title {
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+
+.contact-forms {
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+    color: #555;
 }
 
 @media screen and (max-width: 991px) {

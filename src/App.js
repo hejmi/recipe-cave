@@ -13,6 +13,8 @@ import LoadRecipes from "./components/LoadRecipes";
 import PageLoader from "./components/PageLoader";
 import MainPage from "./components/MainPage";
 import ShowSingleRecipe from "./components/ShowSingleRecipe";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 function App() {
     return (
@@ -71,7 +73,7 @@ function App() {
                 </header>
                 <Switch>
                     <Route path="/contact">
-                        <ShowSingleRecipe />
+                        <Contact />
                     </Route>
                     <Route path="/home/">
                         <MainPage />
@@ -80,6 +82,7 @@ function App() {
                         <PageLoader />
                     </Route>
                 </Switch>
+                <Footer />
             </div>
         </Router>
     );

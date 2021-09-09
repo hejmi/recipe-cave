@@ -1,4 +1,5 @@
 import React from "react";
+import { Form } from "react-bootstrap";
 
 function Footer() {
     return (
@@ -7,36 +8,34 @@ function Footer() {
                 <div className="footer-socials text">Be social!</div>
                 <ul className="social-links">
                     <li>
-                        <a href="#">
+                        <a href="#!">
                             <i className="fab fa-facebook-f"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#!">
                             <i className="fab fa-twitter"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#!">
                             <i className="fab fa-instagram"></i>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div className="contact">
-                <form method="post" action="#" className="contact-form">
-                    <label for="email" className="contact-form text">
-                        Subscribe to our newsletter!
-                    </label>
-                    <input type="email" placeholder="Your email here" />
+            <div className="newsletter">
+                <form method="post" action="#!">
+                    <Form.Label>Subscribe to our newsletter!</Form.Label>
+                    <Form.Control type="email" placeholder="name@example.com" />
                 </form>
             </div>
             <div className="footer-nav">
                 <li>
-                    <a href="#">About us</a>
+                    <a href="#!">About us</a>
                 </li>
                 <li>
-                    <a href="#">Jobs</a>
+                    <a href="#!">Jobs</a>
                 </li>
             </div>
         </footer>
