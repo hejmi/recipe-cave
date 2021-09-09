@@ -20,8 +20,6 @@ body {
     align-items: center;
     text-align: left;
     margin: auto;
-    opacity: 0;
-    animation: fadeIn 1s 2s forwards;
 }
 
 .title {
@@ -29,8 +27,6 @@ body {
     margin: 0 2rem 0 -1rem;
     font-weight: 900;
     font-size: 1.3rem;
-    opacity: 0;
-    animation: bounceInNormal 0.5s 3s forwards;
 }
 
 .title-cave {
@@ -57,7 +53,7 @@ body {
     text-align: center;
     top: calc(50% - 6em);
     left: calc(50% - 6em);
-    animation: fadeOut 1s 2s forwards;
+    animation: fadeOut 1s 1.8s forwards;
 }
 
 .logo-text {
@@ -84,13 +80,13 @@ body {
     margin: 2rem auto 2rem auto;
     padding: 1rem auto;
     opacity: 0;
-    animation: fadeIn 1s 2.3s forwards;
+    animation: fadeIn 1s forwards;
 }
 .slide-container {
     text-align: left;
     margin: auto;
     opacity: 0;
-    animation: fadeIn 1s 2.3s forwards;
+    animation: fadeIn 1s forwards;
 }
 .each-slide {
     margin: 2rem;

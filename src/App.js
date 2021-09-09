@@ -8,65 +8,80 @@ import {
     FormControl,
     Button,
 } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import LoadRecipes from "./components/LoadRecipes";
 import PageLoader from "./components/PageLoader";
 import MainPage from "./components/MainPage";
-import Footer from "./components/Footer";
+import ShowSingleRecipe from "./components/ShowSingleRecipe";
 
 function App() {
     return (
-        <div className="App">
-            <header className="header">
-                <Navbar bg="light" expand="lg" id="desktop-navigation">
-                    <Navbar.Brand href="#" className="title">
-                        <img
-                            src="/images/cave.png"
-                            width="30"
-                            alt="cave"
-                            className="title-cave"
-                        />{" "}
-                        The Recipe Cave
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
-                        <Nav
-                            className="mr-auto my-2 my-lg-0"
-                            style={{ maxHeight: "300px", zIndex: "1" }}
-                            navbarScroll
-                        >
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/contact">Contact</Nav.Link>
-                            <NavDropdown
-                                title="Recipes"
-                                id="navbarScrollingDropdown"
+        <Router>
+            <div className="App">
+                <header className="header">
+                    <Navbar bg="light" expand="lg" id="desktop-navigation">
+                        <Navbar.Brand href="#" className="title">
+                            <img
+                                src="/images/cave.png"
+                                width="30"
+                                alt="cave"
+                                className="title-cave"
+                            />{" "}
+                            The Recipe Cave
+                        </Navbar.Brand>
+                        <Navbar.Toggle aria-controls="navbarScroll" />
+                        <Navbar.Collapse id="navbarScroll">
+                            <Nav
+                                className="mr-auto my-2 my-lg-0"
+                                style={{ maxHeight: "300px", zIndex: "1" }}
+                                navbarScroll
                             >
-                                <LoadRecipes />
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    + Add recipe
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link href="./member">
-                                Become a Contributor
-                            </Nav.Link>
-                        </Nav>
-                        <Form className="d-flex">
-                            <FormControl
-                                type="search"
-                                placeholder="Search for Recipe"
-                                className="mr-2"
-                                aria-label="Search"
-                            />
-                            &nbsp;<Button variant="outline-dark">Search</Button>
-                        </Form>
-                    </Navbar.Collapse>
-                </Navbar>
-            </header>
-            <MainPage />
-            <Footer />
-            <PageLoader />
-        </div>
+                                <Link to="/home/" className="nav-link">
+                                    Home
+                                </Link>
+                                <Link to="/contact/" className="nav-link">
+                                    Contact us
+                                </Link>
+                                <NavDropdown
+                                    title="Recipes"
+                                    id="navbarScrollingDropdown"
+                                >
+                                    <LoadRecipes />
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="#action5">
+                                        + Add recipe
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                                <Link to="/become-member/" className="nav-link">
+                                    Become a Contributor
+                                </Link>
+                            </Nav>
+                            <Form className="d-flex">
+                                <FormControl
+                                    type="search"
+                                    placeholder="Search for Recipe"
+                                    className="mr-2"
+                                    aria-label="Search"
+                                />
+                                &nbsp;
+                                <Button variant="outline-dark">Search</Button>
+                            </Form>
+                        </Navbar.Collapse>
+                    </Navbar>
+                </header>
+                <Switch>
+                    <Route path="/contact">
+                        <ShowSingleRecipe />
+                    </Route>
+                    <Route path="/home/">
+                        <MainPage />
+                    </Route>
+                    <Route path="/">
+                        <PageLoader />
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
     );
 }
-
 export default App;
