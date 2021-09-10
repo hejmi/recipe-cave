@@ -15,7 +15,7 @@ function App() {
 			<div className="App">
 				<header className="header">
 					<Navbar bg="light" expand="lg" id="desktop-navigation">
-						<Navbar.Brand href="#" className="title">
+						<Navbar.Brand href="/" className="title">
 							<img src="/images/cave.png" width="30" alt="cave" className="title-cave" /> The Recipe Cave
 						</Navbar.Brand>
 						<Navbar.Toggle aria-controls="navbarScroll" />
@@ -30,7 +30,7 @@ function App() {
 								<NavDropdown title="Recipes" id="navbarScrollingDropdown">
 									<LoadRecipes />
 									<NavDropdown.Divider />
-									<NavDropdown.Item href="#action5">+ Add recipe</NavDropdown.Item>
+									<NavDropdown.Item href="#!">+ Add recipe</NavDropdown.Item>
 								</NavDropdown>
 								<Link to="/become-member/" className="nav-link">
 									Become a Contributor
