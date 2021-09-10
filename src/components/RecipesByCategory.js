@@ -3,9 +3,7 @@ import React from "react";
 export default function RecipesByCategory() {
 	return (
 		<div className="category-container">
-			<h2 className="title" style={{ fontSize: "2rem", paddingLeft: "4rem", paddingBottom: "2.5rem" }}>
-				..or Find recipes by category
-			</h2>
+			<h2 className="title-categories">..or Find recipes by category</h2>
 			<div className="grid-list">
 				<div>
 					<a className="link wipe" href="#!">

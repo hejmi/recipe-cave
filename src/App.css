@@ -234,14 +234,22 @@ body {
 	color: #555;
 }
 .grid-list {
-	margin-left: 3rem;
-	margin-right: -15rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
+	justify-items: center;
+	align-content: space-around;
 }
+.title-categories {
+	font-weight: 900;
+	font-size: 1.3rem;
+	text-transform: capitalize;
+	margin-left: 3rem;
+	margin-top: 1rem;
+}
+
 .link {
 	display: inline-block;
 	vertical-align: top;
@@ -325,10 +333,32 @@ body {
 		height: 200px;
 	}
 }
-
+@media screen and (max-width: 500px) {
+	.grid-list {
+		display: block;
+		text-align: center;
+		margin: 0;
+	}
+	.title-categories {
+		text-align: center;
+		font-weight: 900;
+		font-size: 1.3rem;
+		text-transform: capitalize;
+		margin-top: 1rem;
+		width: 75%;
+	}
+	.title {
+		text-align: center;
+		margin-left: 0;
+	}
+}
 @media screen and (max-width: 420px) {
 	.recipe-desc {
 		display: none;
+	}
+	.slide-container {
+		margin: 0;
+		left: -0.8rem;
 	}
 }
 
