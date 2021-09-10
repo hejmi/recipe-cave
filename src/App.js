@@ -58,8 +58,8 @@ function App() {
 						<PageLoader />
 					</Route>
 				</Switch>
-				<Footer />
 			</div>
+			<Footer />
 		</Router>
 	);
 }
