@@ -45,7 +45,7 @@ function App() {
 					</Navbar>
 				</header>
 				<Switch>
-					<Route path="/recipes">
+					<Route path="/recipes/:recipeId">
 						<ShowSingleRecipe />
 					</Route>
 					<Route path="/contact">

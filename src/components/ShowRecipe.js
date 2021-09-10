@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router";
 import Axios from "axios";
 import { Clock } from "react-bootstrap-icons";
 
-const openRecipe = (id) => console.log("Opened recipe: " + id);
-
 function ShowRecipe(props) {
+	const history = useHistory();
+
+	const openRecipe = (e) => {
+		history.push(`/recipes/${e}`);
+	};
+
 	const [recipeData, setRecipeData] = useState([]);
 
 	useEffect(() => {
@@ -15,7 +20,7 @@ function ShowRecipe(props) {
 
 	return recipeData.map((recipe, key) => {
 		return (
-			<div key={key} className="recipe-container" onClick={() => openRecipe(props.recipeid)}>
+			<div key={key} className="recipe-container" onClick={(e) => openRecipe(props.recipeid)}>
 				<div>
 					<img src={`/images/recipe/${props.recipeid}.jpg`} alt={props.recipeid} className="recipe-image" />
 				</div>

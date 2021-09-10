@@ -302,6 +302,19 @@ body {
 .wipe:hover::after {
 	transform: translateY(0px);
 }
+.single-recipe {
+	margin: 2rem 4rem;
+}
+.single-recipe .title {
+	font-size: 2rem;
+}
+.single-recipe h4.title {
+	font-size: 1.5rem;
+}
+.single-recipe p {
+	margin-left: -1rem;
+	align-items: center;
+}
 
 @media screen and (max-width: 991px) {
 	.d-flex {
