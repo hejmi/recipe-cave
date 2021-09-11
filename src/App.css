@@ -465,6 +465,23 @@ body {
 		margin: 0;
 		left: -0.8rem;
 	}
+	.header .link {
+		margin: 1rem;
+	}
+	.single-recipe {
+		margin: 2rem 0 0 2rem;
+	}
+	.single-recipe .title {
+		font-size: 1.8rem;
+	}
+	.single-recipe .ingredient-list li {
+		margin-left: -2rem;
+		width: 100%;
+	}
+	.stars-bar {
+		margin: 1rem;
+		margin-top: -0.2rem;
+	}
 }
 
 @keyframes fadeIn {
