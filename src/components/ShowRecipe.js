@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import Axios from "axios";
 import { Clock } from "react-bootstrap-icons";
+import { Rating } from "@material-ui/lab";
 
 function ShowRecipe(props) {
 	const history = useHistory();
@@ -28,6 +29,8 @@ function ShowRecipe(props) {
 					<div className="recipe-title">{recipe.title}</div>
 					<em className="recipe-desc">{recipe.description}</em>
 					<div className="recipe-bottom">
+						<Rating name="simple-controlled" value="3" />
+						<br />
 						<Clock />{" "}
 						<span>
 							Prep: {recipe.prep_time} min, Cooking: {recipe.cooking_time}min
