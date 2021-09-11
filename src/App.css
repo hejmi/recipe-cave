@@ -327,6 +327,8 @@ body {
 .single-recipe p {
 	margin-left: -1rem;
 	align-items: center;
+	font-weight: 700;
+	font-size: 1.1rem;
 }
 .large-image {
 	margin-left: -1rem;
@@ -341,6 +343,9 @@ body {
 }
 .more-row-space {
 	padding-bottom: 1rem;
+}
+.ingredient-list li {
+	text-transform: capitalize;
 }
 @media screen and (max-width: 991px) {
 	.d-flex {

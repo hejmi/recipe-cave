@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useParams } from "react";
+import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 export default function RecipeSteps(props) {

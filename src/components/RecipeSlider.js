@@ -11,7 +11,7 @@ const Slideshow = () => {
 	return (
 		<div className="slide-container">
 			<h2 className="title" style={{ fontSize: "2rem", paddingLeft: "4rem" }}>
-				Check out some random recipes..
+				Check out some favorite recipes..
 			</h2>
 			<Slide slidesToShow={slidess} arrows={false} duration={3000} transitionDuration={1000} easing={"ease"}>
 				<div className="each-slide">
@@ -21,10 +21,10 @@ const Slideshow = () => {
 					<ShowRecipe recipeid="2" />
 				</div>
 				<div className="each-slide">
-					<ShowRecipe recipeid="1" />
+					<ShowRecipe recipeid="3" />
 				</div>
 				<div className="each-slide">
-					<ShowRecipe recipeid="2" />
+					<ShowRecipe recipeid="4" />
 				</div>
 			</Slide>
 		</div>
