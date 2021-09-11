@@ -344,14 +344,16 @@ body {
 	right: 0;
 	padding: 3rem 0rem;
 }
-.numbered {
-	list-style-type: decimal;
-}
 .more-row-space {
 	padding-bottom: 1rem;
 }
 .ingredient-list li {
 	text-transform: capitalize;
+}
+.numbered,
+.numbered li {
+	list-style-type: decimal;
+	text-transform: none !important;
 }
 @media screen and (max-width: 991px) {
 	.d-flex {

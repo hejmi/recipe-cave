@@ -25,6 +25,13 @@ export default function ShowSingleRecipe() {
 		});
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+	function convertTime(minutes) {
+		let time = minutes;
+		var hours = Math.floor(time / 60);
+		var minutes = time % 60;
+		return hours + " hrs " + minutes;
+	}
+
 	return recipeData.map((recipe, key) => {
 		return (
 			<div key={key} className="header zindex">
@@ -47,7 +54,7 @@ export default function ShowSingleRecipe() {
 					<p>
 						<Clock size="16" />
 						<span>
-							&nbsp;Preparation: {recipe.prep_time} minutes | Cooking: {recipe.cooking_time} minutes
+							&nbsp;Preparation: {recipe.prep_time} minutes | Cooking: {recipe.cooking_time >= 60 ? convertTime(recipe.cooking_time) : recipe.cooking_time} minutes
 						</span>
 					</p>
 					<p>{recipe.description}</p>

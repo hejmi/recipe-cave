@@ -19,6 +19,13 @@ function ShowRecipe(props) {
 		});
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+	function convertTime(minutes) {
+		let time = minutes;
+		var hours = Math.floor(time / 60);
+		var minutes = time % 60;
+		return hours + " hrs " + minutes;
+	}
+
 	return recipeData.map((recipe, key) => {
 		return (
 			<div key={key} className="recipe-container" onClick={(e) => openRecipe(props.recipeid)}>
@@ -33,7 +40,7 @@ function ShowRecipe(props) {
 						<br />
 						<Clock />{" "}
 						<span>
-							Prep: {recipe.prep_time} min, Cooking: {recipe.cooking_time}min
+							Prep: {recipe.prep_time} min, Cooking: {recipe.cooking_time >= 60 ? convertTime(recipe.cooking_time) : recipe.cooking_time} min
 						</span>
 					</div>
 				</div>
