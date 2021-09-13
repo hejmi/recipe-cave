@@ -19,10 +19,10 @@ function ShowRecipe(props) {
 		});
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-	function convertTime(minutes) {
-		let time = minutes;
-		var hours = Math.floor(time / 60);
-		var minutes = time % 60;
+	function convertTime(min) {
+		let time = min;
+		let hours = Math.floor(time / 60);
+		let minutes = time % 60;
 		return hours + " hrs " + minutes;
 	}
 
