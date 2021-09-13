@@ -6,6 +6,7 @@ import { Rating } from "@material-ui/lab";
 
 function ShowRecipe(props) {
 	const history = useHistory();
+	const value = 3;
 
 	const openRecipe = (e) => {
 		history.push(`/recipes/${e}`);
@@ -19,10 +20,10 @@ function ShowRecipe(props) {
 		});
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-	function convertTime(minutes) {
-		let time = minutes;
-		var hours = Math.floor(time / 60);
-		var minutes = time % 60;
+	function convertTime(min) {
+		let time = min;
+		let hours = Math.floor(time / 60);
+		let minutes = time % 60;
 		return hours + " hrs " + minutes;
 	}
 
@@ -36,7 +37,7 @@ function ShowRecipe(props) {
 					<div className="recipe-title">{recipe.title}</div>
 					<em className="recipe-desc">{recipe.description}</em>
 					<div className="recipe-bottom">
-						<Rating name="simple-controlled" value="3" />
+						<Rating name="simple-controlled" value={value} />
 						<br />
 						<Clock />{" "}
 						<span>
