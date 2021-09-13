@@ -40,7 +40,7 @@ function ShowRecipe(props) {
 					<div className="recipe-title">{recipe.title}</div>
 					<em className="recipe-desc">{recipe.description}</em>
 					<div className="recipe-bottom">
-						<Rating name="simple-controlled" value={value} />
+						<Rating name="read-only" value={value} readOnly />
 						<br />
 						<Clock />{" "}
 						<span>
