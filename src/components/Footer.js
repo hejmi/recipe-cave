@@ -56,6 +56,7 @@ class Footer extends Component {
                             type="email"
                             onChange={this.changeHandler}
                             placeholder="name@example.com"
+                            required
                         />
                         <Button
                             variant="outline-secondary"
