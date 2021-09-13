@@ -6,6 +6,11 @@ import { Clock, ArrowLeftCircleFill } from "react-bootstrap-icons";
 import RecipeSteps from "./RecipeSteps";
 import { Rating } from "@material-ui/lab";
 
+/*
+ * Maps recipe data & ingredients data from database fetch
+ * to display a single recipe.
+ */
+
 export default function ShowSingleRecipe() {
 	let { recipeId } = useParams();
 	const [recipeData, setRecipeData] = useState([]);
@@ -25,6 +30,7 @@ export default function ShowSingleRecipe() {
 		});
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+	// converts minutes to hours and minutes
 	function convertTime(min) {
 		let time = min;
 		let hours = Math.floor(time / 60);

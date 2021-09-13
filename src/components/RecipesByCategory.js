@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * Returns hard coded categories on "home"
+ */
+
 export default function RecipesByCategory() {
 	return (
 		<div className="category-container">

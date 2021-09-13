@@ -1,5 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+
+/**
+ * Page Loader shows animated logo intro
+ * Pushes location to "home" after 2 sec.
+ */
+
 function PageLoader() {
 	const history = useHistory();
 	setTimeout(() => {

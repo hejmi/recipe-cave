@@ -4,6 +4,11 @@ import "react-slideshow-image/dist/styles.css";
 import ShowRecipe from "./ShowRecipe";
 import useWindowSize from "./useWindowSize";
 
+/**
+ * Slideshow of recipes.
+ * Uses useWindowSize to get current window size and displays 1 or 2 recipes at a time, depending on size of window.
+ */
+
 const Slideshow = () => {
 	const size = useWindowSize();
 	let slidess;

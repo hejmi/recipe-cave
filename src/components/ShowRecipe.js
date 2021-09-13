@@ -4,6 +4,10 @@ import Axios from "axios";
 import { Clock } from "react-bootstrap-icons";
 import { Rating } from "@material-ui/lab";
 
+/**
+ *  Maps result from db to show preview of recipe in slider
+ */
+
 function ShowRecipe(props) {
 	const history = useHistory();
 	const value = 3;
@@ -26,7 +30,6 @@ function ShowRecipe(props) {
 		let minutes = time % 60;
 		return hours + " hrs " + minutes;
 	}
-
 	return recipeData.map((recipe, key) => {
 		return (
 			<div key={key} className="recipe-container" onClick={(e) => openRecipe(props.recipeid)}>

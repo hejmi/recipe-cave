@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 
+/**
+ * Gets the current window size.
+ * Tells slider to show 1 or 2 recipes at a time.
+ * @returns windowSize
+ */
+
 function useWindowSize() {
 	// Initialize state with undefined width/height so server and client renders match
 	const [windowSize, setWindowSize] = useState({
