@@ -1,11 +1,11 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 function Contact() {
     return (
         <div className="contact-main">
             <div className="contact-title">
-                <h1>Feel free to leave a message!</h1>
+                <h1>Feel free to leave a massage!</h1>
             </div>
 
             <div className="contact-forms">
@@ -31,13 +31,20 @@ function Contact() {
                         className="mb-3"
                         controlId="exampleForm.ControlTextarea1"
                     >
-                        <Form.Label>Message</Form.Label>
+                        <Form.Label>Massage</Form.Label>
                         <Form.Control
                             as="textarea"
                             placeholder="Write something!"
                             rows={2}
                         />
                     </Form.Group>
+                    <Button
+                        variant="outline-secondary"
+                        htmlFor="message"
+                        type="submit"
+                    >
+                        Send Massage
+                    </Button>
                 </Form>
             </div>
         </div>
