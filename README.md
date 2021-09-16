@@ -1,3 +1,5 @@
-# Projektarbete
+# School Project Assignment
 
-info kommer...
+A recipe page built with React JS 
+
+Gets recipes from local mysql db - backend/api here: <a href="https://github.com/hejmi/recipe-cave-crud">recipe-cave-crud</a>
