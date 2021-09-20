@@ -32,7 +32,7 @@ function App() {
 									<NavDropdown.Divider />
 									<NavDropdown.Item href="#!">+ Add recipe</NavDropdown.Item>
 								</NavDropdown>
-								<Link to="/become-member/" className="nav-link">
+								<Link to="/home/" className="nav-link">
 									Become a Contributor
 								</Link>
 							</Nav>

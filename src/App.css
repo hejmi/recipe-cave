@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:wght@100&display=swap");
-
 html {
     font-size: 14px;
 }
+
 .App {
     font-family: "Roboto Condensed", sans-serif;
     justify-content: space-between;
     margin-bottom: 12rem;
 }
+
 body {
     font-family: "Roboto Condensed", sans-serif;
 }
@@ -30,9 +31,11 @@ body {
     font-size: 1.3rem;
     text-transform: capitalize;
 }
+
 .zindex {
     z-index: 0;
 }
+
 .title-cave {
     margin-top: -2px;
 }
@@ -78,6 +81,7 @@ body {
     transform: rotate(0deg) scale(2) translateZ(0);
     transition: ease-out;
 }
+
 .main {
     max-width: 1000px;
     text-align: left;
@@ -86,12 +90,14 @@ body {
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
+
 .slide-container {
     text-align: left;
     margin: auto;
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
+
 .each-slide {
     margin: 2rem;
     padding-left: 1rem;
@@ -105,9 +111,11 @@ body {
     display: flex;
     cursor: pointer;
 }
+
 .recipe-container:hover {
     animation: hoverZoom 0.1s forwards linear;
 }
+
 .recipe-image {
     padding: 5px;
     border-radius: 1rem;
@@ -115,25 +123,30 @@ body {
     height: 200px;
     object-fit: cover;
 }
+
 .recipe-title {
     font-weight: 700;
     font-size: 1.1rem;
     text-transform: capitalize;
     padding-bottom: 1rem;
 }
+
 .recipe-content {
     position: relative;
     padding: 1rem;
     height: 200px;
     line-height: 1rem !important;
 }
+
 .recipe-content em {
     font-size: 0.9rem;
 }
+
 .recipe-bottom {
     position: absolute;
     bottom: 1rem;
 }
+
 .recipe-bottom span {
     font-size: 0.8rem;
 }
@@ -158,7 +171,7 @@ body {
 }
 
 .footer-socials .text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #888;
 }
 
@@ -184,19 +197,21 @@ body {
 .fa-facebook-f:hover {
     color: #3b5998;
     animation: swing 0.5s infinite;
-    font-size: 3rem;
+    font-size: 2rem;
     transition: 0.2s;
 }
+
 .fa-twitter:hover {
     color: #00aced;
     animation: swing 0.5s infinite;
-    font-size: 3rem;
+    font-size: 2rem;
     transition: 0.2s;
 }
+
 .fa-instagram:hover {
     color: #54362c;
     animation: swing 0.5s infinite;
-    font-size: 3rem;
+    font-size: 2rem;
     transition: 0.2s;
 }
 
@@ -205,7 +220,7 @@ body {
     flex-direction: column;
     justify-content: center;
     list-style: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     padding-right: 5%;
 }
@@ -219,8 +234,7 @@ body {
 }
 
 .footer-nav li a:hover {
-    font-size: 2.5rem;
-    transition: 0.2s;
+    text-decoration: underline;
 }
 
 .newsletter {
@@ -252,6 +266,7 @@ body {
     margin: 0 auto;
     color: #555;
 }
+
 .grid-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -260,6 +275,7 @@ body {
     grid-row-gap: 0px;
     justify-items: center;
 }
+
 .title-categories {
     font-weight: 900;
     font-size: 1.3rem;
@@ -284,6 +300,7 @@ body {
     margin-left: 0rem;
     position: relative;
 }
+
 .link span {
     position: absolute;
     height: 100%;
@@ -302,6 +319,7 @@ body {
 .wipe {
     transition: color 0.3s;
 }
+
 .wipe::after {
     width: 100%;
     height: 100%;
@@ -314,27 +332,34 @@ body {
     transform: translateY(34px);
     z-index: -1;
 }
+
 .wipe:hover {
     color: #fff;
 }
+
 .wipe:hover::after {
     transform: translateY(0px);
 }
+
 .single-recipe {
     margin: 2rem 4rem;
 }
+
 .single-recipe .title {
     font-size: 2rem;
 }
+
 .single-recipe h4.title {
     font-size: 1.5rem;
 }
+
 .single-recipe p {
     margin-left: -1rem;
     align-items: center;
     font-weight: 700;
     font-size: 1.1rem;
 }
+
 .large-image {
     margin-left: -1rem;
     width: 100%;
@@ -343,28 +368,34 @@ body {
     border-radius: 1rem;
     box-shadow: 0px 0px 20px 0px rgba(150, 150, 150, 0.8);
 }
+
 .stars-bar {
     position: absolute;
     top: 0;
     right: 0;
     padding: 3rem 0rem;
 }
+
 .more-row-space {
     padding-bottom: 1rem;
 }
+
 .ingredient-list li {
     text-transform: capitalize;
 }
+
 .numbered,
 .numbered li {
     list-style-type: decimal;
     text-transform: none !important;
 }
+
 @media screen and (max-width: 991px) {
     .d-flex {
         padding-left: 0;
     }
 }
+
 @media screen and (max-width: 900px) {
     .recipe-image {
         width: 150px;
@@ -389,31 +420,25 @@ body {
         width: 200px;
         height: 200px;
     }
-
     .footer-socials {
         padding: 0;
         text-align: center;
     }
-
     .footer-socials .text,
     .footer-socials li {
         font-size: 1.5rem;
     }
-
     .footer-nav li a {
         font-size: 1.5rem;
         padding-right: 10px;
     }
-
     .newsletter {
         font-size: 1rem;
     }
-
     .footer-nav li a:hover {
         font-size: 2rem;
         transition: 0.2s;
     }
-
     .fa-facebook-f:hover,
     .fa-twitter:hover,
     .fa-instagram:hover {
@@ -421,6 +446,7 @@ body {
         transition: 0.2s;
     }
 }
+
 @media screen and (max-width: 500px) {
     .grid-list {
         display: block;
@@ -439,22 +465,18 @@ body {
         text-align: center;
         margin-left: 0;
     }
-
     .footer-socials .text,
     .footer-socials li {
         padding-left: 0;
         font-size: 1rem;
     }
-
     .footer-nav li a {
         font-size: 1rem;
     }
-
     .footer-nav li a:hover {
         font-size: 1.5rem;
         transition: 0.2s;
     }
-
     .fa-facebook-f:hover,
     .fa-twitter:hover,
     .fa-instagram:hover {
@@ -462,6 +484,7 @@ body {
         transition: 0.2s;
     }
 }
+
 @media screen and (max-width: 420px) {
     .recipe-desc {
         display: none;
@@ -506,22 +529,20 @@ body {
         opacity: 0;
     }
 }
+
 @keyframes bounceInNormal {
     0% {
         opacity: 0;
         transform: scale(0.1);
     }
-
     50% {
         opacity: 1;
         transform: scale(1.5);
     }
-
     70% {
         opacity: 1;
         transform: scale(0.9);
     }
-
     90% {
         opacity: 1;
         transform: scale(1.1);
@@ -537,17 +558,14 @@ body {
         opacity: 0;
         transform: scale(0.1);
     }
-
     50% {
         opacity: 1;
         transform: scale(2.5);
     }
-
     70% {
         opacity: 1;
         transform: scale(1.9);
     }
-
     90% {
         opacity: 1;
         transform: scale(2.1);
@@ -579,13 +597,13 @@ body {
         transform: rotate(0deg);
     }
     25% {
-        transform: rotate(-6deg);
+        transform: rotate(-12deg);
     }
     50% {
         transform: rotate(0deg);
     }
     75% {
-        transform: rotate(6deg);
+        transform: rotate(12deg);
     }
     100% {
         transform: rotate(0deg);
