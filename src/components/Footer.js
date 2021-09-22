@@ -70,7 +70,7 @@ class Footer extends Component {
                 </div>
                 <div className="footer-nav">
                     <li>
-                        <a href="#!">About us</a>
+                        <a href="#!">About</a>
                     </li>
                     <li>
                         <a href="#!">Jobs</a>
