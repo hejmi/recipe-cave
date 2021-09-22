@@ -12,7 +12,7 @@ import useWindowSize from "./useWindowSize";
 const Slideshow = () => {
 	const size = useWindowSize();
 	let slidess;
-	size.width <= 800 ? (slidess = 1) : (slidess = 2);
+	size.width < 800 ? (slidess = 1) : (slidess = 2);
 	return (
 		<div className="slide-container">
 			<h2 className="title" style={{ fontSize: "2rem", paddingLeft: "4rem" }}>

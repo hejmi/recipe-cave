@@ -19,10 +19,16 @@ function ShowRecipe(props) {
 	const [recipeData, setRecipeData] = useState([]);
 
 	useEffect(() => {
+		getRecipeFunction();
+		return () => {
+			setRecipeData({});
+		};
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	const getRecipeFunction = () => {
 		Axios.get(`http://localhost:3002/api/getFromId/${props.recipeid}`).then((data) => {
 			setRecipeData(data.data);
 		});
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	};
 
 	function convertTime(min) {
 		let time = min;
